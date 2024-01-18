@@ -1,6 +1,6 @@
 #include <Dragon.h>
 
-namespace MyPlugin {
+namespace DeviousMimicClothes {
 
     void Dragon::PrintName() {
         auto console = RE::ConsoleLog::GetSingleton();

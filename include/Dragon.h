@@ -1,6 +1,6 @@
 #pragma once
 
-namespace MyPlugin {
+namespace DeviousMimicClothes {
 
     class Dragon {
         std::string _name;
