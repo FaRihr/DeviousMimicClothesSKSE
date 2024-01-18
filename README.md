@@ -1,37 +1,26 @@
-> 📜 other templates available at https://github.com/SkyrimScripting/SKSE_Templates
-
-# SKSE plugin using .cpp and .h files
+# SKSE plugin for Devious Mimic Clothes to validate usability
 
 Very simple C++ SKSE plugin for Skyrim!
 
----
+## What does it do?
 
-- [SKSE plugin using .cpp and .h files](#skse-plugin-using-cpp-and-h-files)
-- [What does it do?](#what-does-it-do)
-- [CommonLibSSE NG](#commonlibsse-ng)
-- [Requirements](#requirements)
-  - [Opening the project](#opening-the-project)
-- [Project setup](#project-setup)
-  - [Finding Your "`mods`" Folder](#finding-your-mods-folder)
-- [Setup your own repository](#setup-your-own-repository)
-- [Sharing is Caring](#sharing-is-caring)
+WIP...
 
-# What does it do?
-
-After running Skyrim, once at the Main Menu, press the `~` key to open the game console.
-
-You will see that we printed `"Akatosh!"` to the console at the Main Menu 🐉
-
-This comes from the `Dragon` class's `PrintName()` function which is declared in
-`Dragon.h` but defined in `Dragon.cpp`.
-
-# CommonLibSSE NG
+## CommonLibSSE NG
 
 Because this uses [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG), it supports Skyrim SE, AE, GOG, and VR.
 
 [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG) is a fork of the popular [powerof3 fork](https://github.com/powerof3/CommonLibSSE) of the _original_ `CommonLibSSE` library created by [Ryan McKenzie](https://github.com/Ryan-rsm-McKenzie) in [2018](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE/commit/224773c424bdb8e36c761810cdff0fcfefda5f4a).
 
-# Requirements
+## Requirements
+
+### For Users
+
+- [The latest DLL](https://github.com/FaRihr/DeviousMimicClothesSKSE/releases/latest)
+- [SKSE](https://www.nexusmods.com/skyrimspecialedition/mods/30379)
+- [Address Library](https://www.nexusmods.com/skyrimspecialedition/mods/32444)
+
+### For Developers
 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/) (_the free Community edition_)
 - [`vcpkg`](https://github.com/microsoft/vcpkg)
@@ -43,16 +32,18 @@ Because this uses [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSS
 
 <img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/VCPKG_ROOT.png" height="150">
 
-## Opening the project
+## Project configuration
+
+### Opening the project
 
 Once you have Visual Studio 2022 installed, you can open this folder in basically any C++ editor, e.g. [VS Code](https://code.visualstudio.com/) or [CLion](https://www.jetbrains.com/clion/) or [Visual Studio](https://visualstudio.microsoft.com/)
 - > _for VS Code, if you are not automatically prompted to install the [C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions, please install those and then close VS Code and then open this project as a folder in VS Code_
 
 You may need to click `OK` on a few windows, but the project should automatically run CMake!
 
-It will _automatically_ download [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG) and everything you need to get started making your new plugin!
+It will _automatically_ download [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG) and everything you need to get started comiling this plugin!
 
-# Project setup
+### Project setup
 
 By default, when this project compiles it will output a `.dll` for your SKSE plugin into the `build/` folder.
 
@@ -74,7 +65,7 @@ into your "`mods`" folder:
 
 <img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/SKYRIM_MODS_FOLDER.png" height="150">
 
-## Finding Your "`mods`" Folder
+### Finding Your "`mods`" Folder
 
 In Mod Organizer 2:
 
@@ -86,25 +77,19 @@ In Vortex:
 
 <img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Vortex/VortexSettingsModsFolder.png" height="150">
 
-# Setup your own repository
+## LICENSING
 
-If you clone this template on GitHub, please:
+The `LICENSE` is the [MIT License](https://choosealicense.com/licenses/mit/), a permissive license which is used by many popular Skyrim mods (_including [CommonLibSSE](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE)_).
 
-- Go into `LICENSE` and change the year and change `<YOUR NAME HERE>` to your name.
-- Go into `CODE_OF_CONDUCT.md` and change `<YOUR CONTACT INFO HERE>` to your contact information.
-
-The `LICENSE` defaults to using the [MIT License](https://choosealicense.com/licenses/mit/), a permissive license which is used by many popular Skyrim mods (_including [CommonLibSSE](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE)_).
-
-The `CODE_OF_CONDUCT.md` defaults to using the [Contributor Covenant](https://www.contributor-covenant.org/), the most popular code of conduct for open source communities.
+The `CODE_OF_CONDUCT.md` is the [Contributor Covenant](https://www.contributor-covenant.org/), the most popular code of conduct for open source communities.
 
 If you'd like to know more about open source licenses, see:
 - [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [Choose an open source license](https://choosealicense.com/)
 
-# Sharing is Caring
+### Sharing is Caring
 
-**If you use this template, PLEASE release your project as a public open source project.** 💖
-
+**If you use this code, PLEASE release your project as a public open source project.** 💖\
 **Please do not release your SKSE plugin on Nexus/etc without making the source code available** \*
 
 > \* _You do you. But please help our community by sharing your source `<3`_

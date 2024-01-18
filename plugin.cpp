@@ -65,12 +65,14 @@ namespace DeviousMimicClothes {
 
         // Setup logging (e.g. using spdlog)
         SetupLog();
-
         auto* plugin = PluginDeclaration::GetSingleton();
         auto version = plugin->GetVersion();
+        
         log::info("{} {} is loading...", plugin->GetName(), version);
 
         GetMessagingInterface()->RegisterListener("SKSE", MessageHandler);
+
+        log::info("{} has finished loading.", plugin->GetName());
 
         return true;
     }
