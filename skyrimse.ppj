@@ -1,0 +1,63 @@
+<?xml version='1.0'?><!-- Game is either sse, tesv, or fo4 -->
+<PapyrusProject xmlns="PapyrusProject.xsd"
+    Flags="TESV_Papyrus_Flags.flg"
+    Game="sse"
+    Output="Scripts"
+    Optimize="true"
+    Anonymize="true"
+    Package="false"
+    Zip="true">
+    <Variables>
+        <Variable Name="ModName" Value="DeviousMimicClothes"/>
+        <Variable Name="ThisProject" Value="."/>
+        <Variable Name="Rel" Value=".\release"/>
+        <Variable Name="MO2" Value="D:\Games\Skyrim\ModOrganizer\mods"/>
+        <Variable Name="Ver" Value="5.0.0"/>
+    </Variables>
+    <Imports>
+        <Import>@ThisProject\Source\Scripts</Import>
+        <Import>@MO2\Devious Devices for SE-AE-VR\Source\Scripts</Import>
+        <Import>@MO2\SexLab Aroused Redux SE\Source\Scripts</Import>
+        <Import>@MO2\SexLab Framework PPLUS\Source\Scripts</Import>
+        <Import>@MO2\SexLab Framework AE\Source\Scripts</Import>
+        <Import>@MO2\ZaZ Animation Pack\Source\Scripts</Import>
+        <Import>@MO2\XP32 Maximum Skeleton Special Extended\Source\Scripts</Import>
+        <Import>@MO2\RaceMenu\Source\Scripts</Import>
+        <Import>@MO2\SkyUI SDK\Source\Scripts</Import>
+        <Import>@MO2\Mfg Fix\Source\Scripts</Import>
+        <Import>@MO2\JContainers SE\Source\Scripts</Import>
+        <Import>@MO2\ConsoleUtilSSE NG\Source\Scripts</Import>
+        <Import>@MO2\FNIS Sexy Move SDK\Source\Scripts</Import>
+        <Import>@MO2\Fores New Idles in Skyrim SE - FNIS SE\Source\Scripts</Import>
+        <Import>@MO2\Skyrim Script Extender (SKSE64)\Source\Scripts</Import>
+        <Import>@MO2\Creation Kit Scripts\Source\Scripts</Import>
+        <!-- <Import>D:\Games\Steam\steamapps\common\Skyrim Special Edition\Data\Source\Scripts</Import> -->
+    </Imports>
+    <Folders>
+        <Folder>.\Source\Scripts</Folder>
+    </Folders>
+    <Packages Output="@ThisProject">
+        <Package Name="@ModName" RootDir="@ThisProject">
+            <Match In="Scripts">*.pex</Match>
+            <Match In="Seq">*.seq</Match>
+            <!-- <Match In="Interface/Logo">*.dds</Match> -->
+            <!-- <Match In="Strings">*.*strings</Match> -->
+        </Package>
+    </Packages>
+    <ZipFiles Output="@Rel">
+        <ZipFile Name="@ModName-@Ver" RootDir="@ThisProject" Compression="deflate">
+        	<Include>DeviousMimicClothes.esp</Include>
+            <!-- <Include>DeviousMimicClothes.bsa</Include> -->
+            <!-- <Include>DeviousMimicClothes - Textures.bsa</Include> -->
+            <Include>meta.ini</Include>
+            <Include>docs</Include>
+            <Include>Interface/Logo</Include>
+            <Include>Interface/Translations</Include>
+            <Include>Scripts</Include>
+            <Include>SEQ</Include>
+            <Include>SKSE</Include>
+            <!-- <Include>Sound</Include> -->
+            <Include>Source</Include>
+        </ZipFile>
+    </ZipFiles>
+</PapyrusProject>

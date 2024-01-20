@@ -4,6 +4,4 @@
 #include "SKSE/SKSE.h"
 #include "REL/Relocation.h"
 
-#include "logger.h"
-
 using namespace std::literals;

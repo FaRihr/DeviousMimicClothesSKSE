@@ -28,7 +28,7 @@ if(DEFINED ENV{SKYRIM_MODS_FOLDER} AND IS_DIRECTORY "$ENV{SKYRIM_MODS_FOLDER}")
 endif()
 
 # Otherwise, you can set OUTPUT_FOLDER to any place you'd like :)
-# set(OUTPUT_FOLDER "C:/path/to/any/folder")
+set(OUTPUT_FOLDER "../..")
 
 # Get the .cpp files from your src/ directory
 # to be passed into add_commonlibsse_plugin
@@ -37,7 +37,7 @@ endif()
 #
 # Please note: the official recommendation is to list our every .cpp
 # file individually after SOURCES
-file(GLOB_RECURSE source_files src/*.cpp)
+file(GLOB_RECURSE source_files source/*.cpp)
 
 # Setup your SKSE plugin as an SKSE plugin!
 find_package(CommonLibSSE CONFIG REQUIRED)
